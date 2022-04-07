@@ -1,0 +1,30 @@
+{% extends "layouts/simple.njk" %}
+
+{% block postContent %}
+<div class="skill-area spb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="skill-title">
+                    <h2>{{skills}}</h2>
+                    <p>{{skillsDesc}}</p>
+                    <a href="#" class="button">{{skillsBtnTitle}}</a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    {% for skill in collections.skills %}
+                    <div class="col-sm-6 single-skill">
+                        <h4>{{skill.data.name}}</h4>
+                        <div class="barfiller">
+                            <span class="tip"></span>
+                            <span class="fill" data-percentage={{skill.data.percentage}}></span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock postContent %}
