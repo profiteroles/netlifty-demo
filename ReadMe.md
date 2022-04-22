@@ -1,1 +1,5 @@
+---
+eleventyExcludeFromCollections: true
+---
+
 # Netlify Practice
